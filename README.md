@@ -9,7 +9,7 @@
 # Installation
 
 1. Install Isaac Lab, see the [installation guide](https://isaac-sim.github.io/IsaacLab/v2.0.0/source/setup/installation/index.html).
-    **Note**: Currently HOVER has been tested with Isaac Lab versions 2.0.0. After you clone the Isaac Lab
+    **Note**: Currently we has been tested with Isaac Lab versions 2.0.0. After you clone the Isaac Lab
     repository, check out the specific tag before installation. Also note that the `rsl_rl`
     package is renamed to `rsl_rl_lib` with the current `v2.0.0` tag of Isaac Lab, causing installation issues.
     This will be fixed once a new tag is created on the Isaac Lab repo.
@@ -35,11 +35,12 @@
 
 # Training
 ## Teacher Policy
+reference_motion_path can be set to stable_punch.pkl, wave_left07_poses.pkl, wave_right07_poses.pkl, wave_both07_poses.pkl, guitar_right01_poses.pkl, hook_right_poses.pkl, greeting-08-shakehands-hamada_poses.pkl
 
 ```bash
 ${ISAACLAB_PATH:?}/isaaclab.sh -p scripts/rsl_rl/train_teacher_policy.py \
     --num_envs 1024 \
-    --reference_motion_path neural_wbc/data/data/motions/stable_punch.pkl
+    --reference_motion_path neural_wbc/data/data/motions/wave_left07_poses.pkl
 ```
 
 The teacher policy is trained for 10000000 iterations, or until the user interrupts the training. The resulting checkpoint is stored in `neural_wbc/data/data/policy/h1:teacher/` and the filename is `model_<iteration_number>.pt`.
@@ -50,9 +51,9 @@ The teacher policy is trained for 10000000 iterations, or until the user interru
 ```bash
 ${ISAACLAB_PATH:?}/isaaclab.sh -p scripts/rsl_rl/train_student_policy.py \
     --num_envs 1024 \
-    --reference_motion_path neural_wbc/data/data/motions/stable_punch.pkl \
+    --reference_motion_path neural_wbc/data/data/motions/wave_left07_poses.pkl \
     --teacher_policy.resume_path neural_wbc/data/data/policy/h1:teacher \
-    --teacher_policy.checkpoint model_<iteration_number>.pt
+    --teacher_policy.checkpoint model_71500.pt
 ```
 This assumes that you have already trained the teacher policy as there is no provided teacher policy in the repo. Change the filename to match the checkpoint you trained.
 
@@ -64,9 +65,9 @@ This assumes that you have already trained the teacher policy as there is no pro
 ```bash
 ${ISAACLAB_PATH:?}/isaaclab.sh -p scripts/rsl_rl/play.py \
     --num_envs 10 \
-    --reference_motion_path neural_wbc/data/data/motions/stable_punch.pkl \
+    --reference_motion_path neural_wbc/data/data/motions/wave_left07_poses.pkl \
     --teacher_policy.resume_path neural_wbc/data/data/policy/h1:teacher \
-    --teacher_policy.checkpoint model_<iteration_number>.pt
+    --teacher_policy.checkpoint model_71500.pt
 ```
 
 ## Play Student Policy
@@ -74,10 +75,10 @@ ${ISAACLAB_PATH:?}/isaaclab.sh -p scripts/rsl_rl/play.py \
 ```bash
 ${ISAACLAB_PATH:?}/isaaclab.sh -p scripts/rsl_rl/play.py \
     --num_envs 10 \
-    --reference_motion_path neural_wbc/data/data/motions/stable_punch.pkl \
+    --reference_motion_path neural_wbc/data/data/motions/wave_left07_poses.pkl \
     --student_player \
     --student_path neural_wbc/data/data/policy/h1:student \
-    --student_checkpoint model_<iteration_number>.pt
+    --student_checkpoint model_100000.pt
 ```
 
 # Evaluation
@@ -87,7 +88,6 @@ The evaluation iterates through all the reference motions included in the datase
 off during evaluation. At the end of execution, the script summarizes the results with the following
 reference motion tracking metrics:
 
-> **_NOTE:_** Running evaluation with 1024 environments will require approximately 13GB of GPU memory. Adjust the `--num_envs` parameter based on your available GPU resources.
 
 * **Success Rate [%]**: The percentage of motion tracking episodes that are successfully completed. An
     episode is considered successful if it follows the reference motion from start to finish without
@@ -134,7 +134,6 @@ Please be aware that the `mujoco_wrapper` only supports one environment at a tim
 
 
 
-
 ## Running Scripts from an Isaac Lab Docker Container
 
 You can run scripts in a Docker container without using the Isaac Sim GUI. Follow these steps:
@@ -166,7 +165,6 @@ You can run scripts in a Docker container without using the Isaac Sim GUI. Follo
      ```
 
 You can now run scripts in headless mode by passing the `--headless` option.
-
 
 
 # Acknowledgments
