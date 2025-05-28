@@ -6,35 +6,6 @@
 [![Linux platform](https://img.shields.io/badge/ubuntu-22.04-red)](https://releases.ubuntu.com/22.04/)
 
 
-# Table of Contents
-
-- [HOVER WBC](#hover-wbc)
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-- [Installation](#installation)
-- [Training](#training)
-  - [Data Processing](#data-processing)
-    - [AMASS dataset](#amass-dataset)
-  - [Teacher Policy](#teacher-policy)
-  - [Student Policy](#student-policy)
-  - [General Remarks for Training](#general-remarks-for-training)
-  - [Generalist vs. Specialist Policy](#generalist-vs-specialist-policy)
-- [Testing](#testing)
-  - [Play Teacher Policy](#play-teacher-policy)
-  - [Play Student Policy](#play-student-policy)
-- [Evaluation](#evaluation)
-- [Overwriting Configuration Values](#overwriting-configuration-values)
-- [Sim-to-Sim Validation](#sim-to-sim-validation)
-- [Developing](#developing)
-  - [Unit testing](#unit-testing)
-  - [Linting \& Formatting](#linting--formatting)
-  - [Set up IDE (Optional)](#set-up-ide-optional)
-  - [Running Scripts from an Isaac Lab Docker Container](#running-scripts-from-an-isaac-lab-docker-container)
-- [License](#license)
-- [Contributors](#contributors)
-- [Acknowledgments](#acknowledgments)
-
-
 # Installation
 
 1. Install Isaac Lab, see the [installation guide](https://isaac-sim.github.io/IsaacLab/v2.0.0/source/setup/installation/index.html).
