@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: neural_wbc_core
+Version: 0.1.0
+Summary: Core library for neural whole body control
+Requires-Python: >=3.10
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

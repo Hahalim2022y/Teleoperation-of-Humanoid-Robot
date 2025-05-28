@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: neural_wbc_isaac_lab_wrapper
+Version: 0.1.0
+Summary: IsaacLab wrapper for neural whole body control
+Requires-Python: >=3.10
+Requires-Dist: psutil
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

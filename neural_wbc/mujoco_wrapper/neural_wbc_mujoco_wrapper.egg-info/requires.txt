@@ -1,0 +1,7 @@
+mujoco
+mujoco-python-viewer
+numpy
+torch
+tyro
+neural_wbc_core
+neural_wbc_data

@@ -1,0 +1,16 @@
+README.md
+setup.py
+neural_wbc/student_policy/__init__.py
+neural_wbc/student_policy/policy.py
+neural_wbc/student_policy/storage.py
+neural_wbc/student_policy/student_policy_trainer.py
+neural_wbc/student_policy/student_policy_trainer_cfg.py
+neural_wbc/student_policy/teacher_policy.py
+neural_wbc/tests/__init__.py
+neural_wbc/tests/test_storage.py
+neural_wbc/tests/test_student_policy_trainer.py
+neural_wbc_student_policy.egg-info/PKG-INFO
+neural_wbc_student_policy.egg-info/SOURCES.txt
+neural_wbc_student_policy.egg-info/dependency_links.txt
+neural_wbc_student_policy.egg-info/namespace_packages.txt
+neural_wbc_student_policy.egg-info/top_level.txt

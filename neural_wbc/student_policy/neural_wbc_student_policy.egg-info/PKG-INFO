@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: neural_wbc_student_policy
+Version: 0.0.0
+Summary: Neural WBC student policy trainer
+Requires-Python: >=3.10
+Dynamic: requires-python
+Dynamic: summary

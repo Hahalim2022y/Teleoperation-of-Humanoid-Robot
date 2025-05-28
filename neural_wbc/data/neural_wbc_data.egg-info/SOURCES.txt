@@ -1,0 +1,9 @@
+README.md
+setup.py
+neural_wbc/data/__init__.py
+neural_wbc_data.egg-info/PKG-INFO
+neural_wbc_data.egg-info/SOURCES.txt
+neural_wbc_data.egg-info/dependency_links.txt
+neural_wbc_data.egg-info/top_level.txt
+tests/__init__.py
+tests/test_get_file_path.py

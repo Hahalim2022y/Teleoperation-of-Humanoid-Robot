@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: neural_wbc_inference_env
+Version: 0.1.0
+Summary: Environment used for inference e.g. at deployment and evaluation
+Requires-Python: >=3.10
+Requires-Dist: mujoco
+Requires-Dist: mujoco-python-viewer
+Requires-Dist: neural_wbc_mujoco_wrapper
+Requires-Dist: neural_wbc_student_policy
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: tyro
+Requires-Dist: neural_wbc_core
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

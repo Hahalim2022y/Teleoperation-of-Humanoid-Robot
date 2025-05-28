@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: neural_wbc_mujoco_wrapper
+Version: 0.1.0
+Summary: Mujoco wrapper for sim-to-sim validation
+Requires-Python: >=3.10
+Requires-Dist: mujoco
+Requires-Dist: mujoco-python-viewer
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: tyro
+Requires-Dist: neural_wbc_core
+Requires-Dist: neural_wbc_data
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
